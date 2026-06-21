@@ -1,0 +1,104 @@
+schema_version: "RepoManifest.v1"
+
+repo:
+  full_name: "Boswecw/fa_local"
+  local_name: "fa-local"
+  package_name: "fa-local"
+  default_branch: "master"
+  repo_class: "governed_local_execution_service"
+
+identity:
+  product_name: "FA Local"
+  one_line: "App-support governed local execution boundary for Forge applications."
+  authority_role: "local_policy_gated_execution_boundary"
+
+owns:
+  - trusted local execution request intake
+  - requester trust resolution
+  - policy-gated execution admission
+  - capability declaration and admission checks
+  - bounded execution-plan validation
+  - truthful local execution-state reporting
+
+does_not_own:
+  - shared local-runtime doctrine
+  - model routing or candidate generation
+  - file-intelligence extraction
+  - canonical memory
+  - public app UX
+  - cloud billing or customer authority
+
+upstream_authorities:
+  Forge Local Runtime:
+    owns: "shared local-runtime doctrine, execution vocabulary, and cross-service boundary language"
+  Forge_Command:
+    owns: "operator control surfaces, credential brokerage, and command-plane review"
+  Cortex:
+    owns: "local file intelligence and retrieval preparation"
+  NeuronForge:
+    owns: "local inference routing and candidate output"
+
+downstream_consumers:
+  - AuthorForge
+  - Forge_Command
+  - governed local execution workflows
+
+canonical_files:
+  - repo.manifest.yaml
+  - README.md
+  - SYSTEM.md
+  - BOUNDARIES.md
+  - CAPABILITIES.md
+  - POLICY.md
+  - Cargo.toml
+  - doc/FLLSYSTEM.md
+  - doc/system/_index.md
+
+generated_files:
+  - AGENTS.md
+  - CLAUDE.md
+  - CODEX.md
+  - GEMINI.md
+
+agent_edit_policy:
+  may_edit:
+    - src/**
+    - tests/**
+    - schemas/**
+    - docs/**
+    - doc/system/**
+    - scripts/**
+    - examples/**
+  must_not_edit_directly:
+    - AGENTS.md
+    - CLAUDE.md
+    - CODEX.md
+    - GEMINI.md
+  must_regenerate:
+    - AGENTS.md
+    - CLAUDE.md
+    - CODEX.md
+    - GEMINI.md
+
+verification:
+  required_identity_checks:
+    - repository_full_name
+    - local_directory_name
+    - package_name
+    - README title
+    - default_branch
+    - canonical_files_exist
+    - generated_instruction_hashes_match
+  test_commands:
+    - cargo test
+  build_commands:
+    - cargo build
+    - bash doc/system/BUILD.sh
+  safety_rules:
+    - "FA Local gates execution locally; it must not become an unbounded agent runtime."
+    - "Execution admission must remain policy-backed, explicit, and fail-closed."
+    - "Do not merge execution coordination with model routing, file intelligence, or public app UX."
+  llm_rules:
+    - "Start from the real repo root at /home/charlie/Forge/apps/public-app-local-support/fa-local."
+    - "Preserve typed Rust boundaries and explicit failure posture."
+    - "Keep shared doctrine in Forge Local Runtime and implementation authority in FA Local."

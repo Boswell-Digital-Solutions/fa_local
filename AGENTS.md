@@ -7,7 +7,7 @@ Manifest hash: sha256:7ab412bad0ed680cf654b2cbae67ea06c786bb23042fa88474750e13ca
 Receipt: receipts/repo-context/latest.json
 -->
 
-# CLAUDE.md - FA Local Agent Instructions
+# AGENTS.md - FA Local Agent Instructions
 
 ## Repo Identity
 
