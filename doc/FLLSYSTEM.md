@@ -33,6 +33,8 @@ bash doc/system/BUILD.sh
 
 # 1. Overview and Charter
 
+> **System identity — Forge family (public-app local support).** This service supports Forge public-facing applications and lives in `apps/public-app-local-support`. It is **not** the bds business-side counterpart `ecosystem/local-systems/fa-local-operator`.
+
 ## Purpose
 
 FA Local is the bounded local execution-control service for Forge applications.
